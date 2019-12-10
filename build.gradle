@@ -1,0 +1,78 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+
+    ext {
+        versions = [
+                play_core_version        : '1.5.0',
+                kotlin_version           : '1.3.50',
+                appcompat_version        : '1.0.2',
+                core_ktx_version         : '1.0.2',
+                constraint_layout_version: '1.1.3',
+                legacy_support_v4        : '1.0.0',
+                lifecycle_extension      : '2.0.0',
+                lifecycle_viewmodel_ktx  : '2.0.0',
+                lifecycle_version        : '2.1.0-beta01',
+                material_version         : '1.0.0',
+                annotation_version       : '1.1.0',
+
+
+                logging_interceptor_version       : '3.9.1',
+                retrofit_version                  : '2.6.1',
+                retrofit_adapter_rxjava2_version  : '2.6.1',
+                retrofit_converter_gson_version   : '2.6.1',
+                retrofit_converter_scalars_version: '2.6.1'
+        ]
+
+        appCompatDependencies = [
+                kotlin               : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$ext.versions.kotlin_version",
+                appcompat            : "androidx.appcompat:appcompat:$ext.versions.appcompat_version",
+                coreKtx              : "androidx.core:core-ktx:$ext.versions.core_ktx_version",
+                constraintLayout     : "androidx.constraintlayout:constraintlayout:$ext.versions.constraint_layout_version",
+                legacySupportV4      : "androidx.legacy:legacy-support-v4:$ext.versions.legacy_support_v4",
+                lifeCycleEx          : "androidx.lifecycle:lifecycle-extensions:$ext.versions.lifecycle_extension",
+                lifeCycleViewModelKtx: "androidx.lifecycle:lifecycle-viewmodel-ktx:$ext.versions.lifecycle_viewmodel_ktx",
+
+                lifeCycleExtensions  : "androidx.lifecycle:lifecycle-extensions:$ext.versions.lifecycle_version",
+                lifeCycleViewModelKtx: "androidx.lifecycle:lifecycle-viewmodel-ktx:$ext.versions.lifecycle_version",
+                material             : "com.google.android.material:material:$ext.versions.material_version",
+                annotation           : "androidx.annotation:annotation:$ext.versions.annotation_version",
+
+        ]
+
+
+        networkDependencies = [
+                okhttpLoggingInterceptor     : "com.squareup.okhttp3:logging-interceptor:$ext.versions.logging_interceptor_version",
+                retrofit                     : "com.squareup.retrofit2:retrofit:$ext.versions.retrofit_version",
+                retrofitAdapterRxjava2Version: "com.squareup.retrofit2:adapter-rxjava2:$ext.versions.retrofit_adapter_rxjava2_version",
+                retrofitConverterGsonVersion : "com.squareup.retrofit2:converter-gson:$ext.versions.retrofit_converter_gson_version",
+                retrofit2ConverterScalars    : "com.squareup.retrofit2:converter-scalars:$ext.versions.retrofit_converter_scalars_version",
+        ]
+
+    }
+
+    ext.kotlin_version = '1.3.50'
+    repositories {
+        google()
+        jcenter()
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

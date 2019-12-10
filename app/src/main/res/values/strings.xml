@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ExampleActivity</string>
+
+
+    <string name="imp_key">IAMPORT 관리자 페이지에 있는 imp_key</string>
+    <string name="imp_secret">IAMPORT 관리자 페이지에 있는 imp_secret</string>
+
+</resources>
